@@ -1,20 +1,21 @@
 import React from "react"
-import Articles from "../components/articles"
-import Layout from "../components/layout"
+import MyLayout from "../components/my-layout"
 import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
+import { Typography } from "antd"
 
 const Home = ({ articles, categories, homepage }) => {
   return (
-    <Layout categories={categories}>
+    <MyLayout categories={categories} currentMenu="0">
       <Seo seo={homepage.attributes.seo} />
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
-          <h1>{homepage.attributes.hero.title}</h1>
-          <Articles articles={articles} />
-        </div>
-      </div>
-    </Layout>
+      <Typography.Title>{homepage.attributes.hero.title}</Typography.Title>
+      {/*<div className="uk-section">*/}
+      {/*  <div className="uk-container uk-container-large">*/}
+      {/*    <h1>{homepage.attributes.hero.title}</h1>*/}
+      {/*    <Articles articles={articles} />*/}
+      {/*  </div>*/}
+      {/*</div>*/}
+    </MyLayout>
   )
 }
 

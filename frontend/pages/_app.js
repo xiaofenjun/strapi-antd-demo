@@ -1,5 +1,6 @@
 import App from "next/app"
 import Head from "next/head"
+import "antd/dist/antd.min.css"
 import "../assets/css/style.css"
 import { createContext } from "react"
 import { fetchAPI } from "../lib/api"
